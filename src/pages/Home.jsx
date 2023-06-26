@@ -23,7 +23,7 @@ export const Home = () => {
           EXPLORE
         </Link>
       </div> */}
-        <div className="bg-white px-9 py-16 md:px-14 md:py-24 lg:px-[4.5rem] lg:py-28 rounded-full cursor-pointer lg:mx-48 lg:mt-20">
+        <div className="bg-white px-9 py-16 mt-5 md:px-14 md:py-24 lg:px-[4.5rem] lg:py-28 rounded-full cursor-pointer lg:mx-48 lg:mt-20">
           <Link
             to={"/"}
             className="text-[1.25rem] md:text-[2rem] font-bellafair"
