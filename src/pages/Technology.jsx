@@ -1,4 +1,4 @@
-import { technology, crew } from "../constants/data.json";
+import { technology } from "../constants/data.json";
 import { useEffect, useState } from "react";
 
 export const Technology = () => {
@@ -6,9 +6,6 @@ export const Technology = () => {
   const [techInfo, setTechInfo] = useState();
 
   useEffect(() => {
-    // const planetInfo = destinations.filter(
-    //   (destination) => destination.name === planet
-    // );
     const techData = technology.filter((data) => data.name === tech);
 
     setTechInfo(techData[0]);
@@ -45,19 +42,31 @@ export const Technology = () => {
           <div className="flex flex-row space-x-5 lg:flex-col lg:space-x-0 lg:space-y-10">
             <a
               onClick={() => changeTech("Launch vehicle")}
-              className="cursor-pointer bg-transparent border text-white border-white border-opacity-20 font-bellafair rounded-full flex items-center justify-center w-[2.5rem] h-[2.5rem] md:w-[3.5rem] md:h-[3.5rem] lg:w-[5rem] lg:h-[5rem]"
+              className={
+                tech === "Launch vehicle"
+                  ? "cursor-pointer bg-transparent border text-black bg-white border-white border-opacity-20 font-bellafair rounded-full flex items-center justify-center w-[2.5rem] h-[2.5rem] md:w-[3.5rem] md:h-[3.5rem] lg:w-[5rem] lg:h-[5rem]"
+                  : "cursor-pointer bg-transparent border text-white border-white border-opacity-20 font-bellafair rounded-full flex items-center justify-center w-[2.5rem] h-[2.5rem] md:w-[3.5rem] md:h-[3.5rem] lg:w-[5rem] lg:h-[5rem] hover:border-opacity-100 hover:bg-transparent"
+              }
             >
               1
             </a>
             <a
               onClick={() => changeTech("Spaceport")}
-              className="cursor-pointer bg-transparent border text-white border-white border-opacity-20 font-bellafair rounded-full flex items-center justify-center w-[2.5rem] h-[2.5rem] md:w-[3.5rem] md:h-[3.5rem] lg:w-[5rem] lg:h-[5rem]"
+              className={
+                tech === "Spaceport"
+                  ? "cursor-pointer bg-transparent border text-black bg-white border-white border-opacity-20 font-bellafair rounded-full flex items-center justify-center w-[2.5rem] h-[2.5rem] md:w-[3.5rem] md:h-[3.5rem] lg:w-[5rem] lg:h-[5rem]"
+                  : "cursor-pointer bg-transparent border text-white border-white border-opacity-20 font-bellafair rounded-full flex items-center justify-center w-[2.5rem] h-[2.5rem] md:w-[3.5rem] md:h-[3.5rem] lg:w-[5rem] lg:h-[5rem] hover:border-opacity-100 hover:bg-transparent"
+              }
             >
               2
             </a>
             <a
               onClick={() => changeTech("Space capsule")}
-              className="cursor-pointer bg-transparent border text-white border-white border-opacity-20 font-bellafair rounded-full flex items-center justify-center w-[2.5rem] h-[2.5rem] md:w-[3.5rem] md:h-[3.5rem] lg:w-[5rem] lg:h-[5rem]"
+              className={
+                tech === "Space capsule"
+                  ? "cursor-pointer bg-transparent border text-black bg-white border-white border-opacity-20 font-bellafair rounded-full flex items-center justify-center w-[2.5rem] h-[2.5rem] md:w-[3.5rem] md:h-[3.5rem] lg:w-[5rem] lg:h-[5rem]"
+                  : "cursor-pointer bg-transparent border text-white border-white border-opacity-20 font-bellafair rounded-full flex items-center justify-center w-[2.5rem] h-[2.5rem] md:w-[3.5rem] md:h-[3.5rem] lg:w-[5rem] lg:h-[5rem] hover:border-opacity-100 hover:bg-transparent"
+              }
             >
               3
             </a>

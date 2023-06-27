@@ -43,6 +43,11 @@ export default {
         lg: "1440px",
         xl: "1750px",
       },
+      boxShadow: {
+        "hoverShadow-mobile": "0px 0px 0px 40px rgba(179,179,179,0.2)",
+        "hoverShadow-tablet": "0px 0px 0px 60px rgba(179,179,179,0.2)",
+        "hoverShadow-desktop": "0px 0px 0px 90px rgba(179,179,179,0.2)",
+      },
     },
   },
   plugins: [],

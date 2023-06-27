@@ -40,19 +40,35 @@ export const Crew = () => {
           <div className="flex flex-row space-x-5 md:hidden">
             <a
               onClick={() => changeCrew("Douglas Hurley")}
-              className="cursor-pointer p-[0.35rem] bg-white opacity-20 rounded-full"
+              className={
+                member === "Douglas Hurley"
+                  ? "cursor-pointer p-[0.35rem] bg-white rounded-full"
+                  : "cursor-pointer p-[0.35rem] bg-white opacity-25  rounded-full hover:opacity-50"
+              }
             />
             <a
               onClick={() => changeCrew("Mark Shuttleworth")}
-              className="cursor-pointer p-[0.35rem] bg-white opacity-20 rounded-full"
+              className={
+                member === "Mark Shuttleworth"
+                  ? "cursor-pointer p-[0.35rem] bg-white rounded-full"
+                  : "cursor-pointer p-[0.35rem] bg-white opacity-25  rounded-full hover:opacity-50"
+              }
             />
             <a
               onClick={() => changeCrew("Victor Glover")}
-              className="cursor-pointer p-[0.35rem] bg-white opacity-20 rounded-full"
+              className={
+                member === "Victor Glover"
+                  ? "cursor-pointer p-[0.35rem] bg-white rounded-full"
+                  : "cursor-pointer p-[0.35rem] bg-white opacity-25  rounded-full hover:opacity-50"
+              }
             />
             <a
               onClick={() => changeCrew("Anousheh Ansari")}
-              className="cursor-pointer p-[0.35rem] bg-white opacity-20 rounded-full"
+              className={
+                member === "Anousheh Ansari"
+                  ? "cursor-pointer p-[0.35rem] bg-white rounded-full"
+                  : "cursor-pointer p-[0.35rem] bg-white opacity-25  rounded-full hover:opacity-50"
+              }
             />
           </div>
           <div className="flex flex-col space-y-1 md:w-9/12 md:h-56 lg:w-full">
@@ -69,19 +85,35 @@ export const Crew = () => {
           <div className="hidden md:flex flex-row space-x-5">
             <a
               onClick={() => changeCrew("Douglas Hurley")}
-              className="cursor-pointer p-[0.35rem] bg-white opacity-20 rounded-full"
+              className={
+                member === "Douglas Hurley"
+                  ? "cursor-pointer p-[0.35rem] bg-white rounded-full"
+                  : "cursor-pointer p-[0.35rem] bg-white opacity-25  rounded-full hover:opacity-50"
+              }
             />
             <a
               onClick={() => changeCrew("Mark Shuttleworth")}
-              className="cursor-pointer p-[0.35rem] bg-white opacity-20 rounded-full"
+              className={
+                member === "Mark Shuttleworth"
+                  ? "cursor-pointer p-[0.35rem] bg-white rounded-full"
+                  : "cursor-pointer p-[0.35rem] bg-white opacity-25  rounded-full hover:opacity-50"
+              }
             />
             <a
               onClick={() => changeCrew("Victor Glover")}
-              className="cursor-pointer p-[0.35rem] bg-white opacity-20 rounded-full"
+              className={
+                member === "Victor Glover"
+                  ? "cursor-pointer p-[0.35rem] bg-white rounded-full"
+                  : "cursor-pointer p-[0.35rem] bg-white opacity-25  rounded-full hover:opacity-50"
+              }
             />
             <a
               onClick={() => changeCrew("Anousheh Ansari")}
-              className="cursor-pointer p-[0.35rem] bg-white opacity-20 rounded-full"
+              className={
+                member === "Anousheh Ansari"
+                  ? "cursor-pointer p-[0.35rem] bg-white rounded-full"
+                  : "cursor-pointer p-[0.35rem] bg-white opacity-25  rounded-full hover:opacity-50"
+              }
             />
           </div>
         </div>

@@ -34,19 +34,44 @@ export const Destination = () => {
         </div>
         <div className="flex flex-col space-y-7 justify-center items-center lg:items-start lg:w-[30rem]">
           <div className="flex flex-row space-x-10 font-barlow text-lightPurple text-[0.875rem] tracking-[0.14763rem] md:text-[1rem] md:tracking-[0.16875rem]">
-            <a onClick={() => changePlanet("Moon")} className="cursor-pointer">
+            <a
+              onClick={() => changePlanet("Moon")}
+              className={
+                planet === "Moon"
+                  ? "cursor-pointer border-b-2 border-white pb-2"
+                  : "cursor-pointer border-b-2 pb-2 border-b-transparent hover:border-white hover:border-opacity-20"
+              }
+            >
               MOON
             </a>
-            <a onClick={() => changePlanet("Mars")} className="cursor-pointer">
+            <a
+              onClick={() => changePlanet("Mars")}
+              className={
+                planet === "Mars"
+                  ? "cursor-pointer border-b-2 border-white pb-2"
+                  : "cursor-pointer border-b-2 pb-2 border-b-transparent hover:border-white hover:border-opacity-20"
+              }
+            >
               MARS
             </a>
             <a
               onClick={() => changePlanet("Europa")}
-              className="cursor-pointer"
+              className={
+                planet === "Europa"
+                  ? "cursor-pointer border-b-2 border-white pb-2"
+                  : "cursor-pointer border-b-2 pb-2 border-b-transparent hover:border-white hover:border-opacity-20"
+              }
             >
               EUROPA
             </a>
-            <a onClick={() => changePlanet("Titan")} className="cursor-pointer">
+            <a
+              onClick={() => changePlanet("Titan")}
+              className={
+                planet === "Titan"
+                  ? "cursor-pointer border-b-2 border-white pb-2"
+                  : "cursor-pointer border-b-2 pb-2 border-b-transparent hover:border-white hover:border-opacity-20"
+              }
+            >
               TITAN
             </a>
           </div>
