@@ -13,7 +13,6 @@ export const Crew = () => {
 
     setMemberInfo(memberData[0]);
   }, [member]);
-  console.log(memberInfo);
 
   const changeCrew = (member) => {
     setMember(member);
