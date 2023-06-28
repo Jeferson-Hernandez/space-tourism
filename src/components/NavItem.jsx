@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
 import { NavLink } from "react-router-dom";
 
-export const NavItem = ({ text, number = 0 }) => {
+export const NavItem = ({ text, number = 0, toggleMenu = () => {} }) => {
   return (
     <NavLink
       to={text === "home" ? "" : text}
+      onClick={() => toggleMenu(false)}
       className={({ isActive }) =>
         isActive
           ? "my-3 py-1 border-r-4 text-lightWhite  tracking-[0.16875rem] md:my-0 md:border-b-2 md:py-9 md:border-r-0"

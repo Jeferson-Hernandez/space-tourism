@@ -22,7 +22,7 @@ export const Destination = () => {
 
   return (
     <section className="h-screen overflow-x-hidden bg-destination-mobile md:bg-destination-tablet lg:bg-destination-desktop object-cover bg-cover bg-no-repeat pt-24 md:pt-32">
-      <h5 className="text-lightWhite text-center font-barlow pb-8 text-[1rem] tracking-[0.16875rem] md:text-left md:pb-14 md:w-full md:pl-10 md:text-[1.25rem] md:tracking-[0.21094rem] lg:text-[1.75rem] lg:tracking-[0.29531rem] lg:pb-0 lg:pl-48">
+      <h5 className="text-lightWhite text-center font-barlow pb-8 tracking-[0.16875rem] md:text-left md:pb-14 md:w-full md:pl-10 md:tracking-[0.21094rem] lg:tracking-[0.29531rem] lg:pb-0 lg:pl-48">
         <span className="text-lightWhite font-barlow font-bold opacity-25 tracking-[0.16875rem] pr-5">
           01
         </span>
@@ -34,51 +34,24 @@ export const Destination = () => {
         </div>
         <div className="flex flex-col space-y-7 justify-center items-center lg:items-start lg:w-[30rem]">
           <div className="flex flex-row space-x-10 font-barlow text-lightPurple text-[0.875rem] tracking-[0.14763rem] md:text-[1rem] md:tracking-[0.16875rem]">
-            <a
-              onClick={() => changePlanet("Moon")}
-              className={
-                planet === "Moon"
-                  ? "cursor-pointer border-b-2 border-white pb-2"
-                  : "cursor-pointer border-b-2 pb-2 border-b-transparent hover:border-white hover:border-opacity-20"
-              }
-            >
-              MOON
-            </a>
-            <a
-              onClick={() => changePlanet("Mars")}
-              className={
-                planet === "Mars"
-                  ? "cursor-pointer border-b-2 border-white pb-2"
-                  : "cursor-pointer border-b-2 pb-2 border-b-transparent hover:border-white hover:border-opacity-20"
-              }
-            >
-              MARS
-            </a>
-            <a
-              onClick={() => changePlanet("Europa")}
-              className={
-                planet === "Europa"
-                  ? "cursor-pointer border-b-2 border-white pb-2"
-                  : "cursor-pointer border-b-2 pb-2 border-b-transparent hover:border-white hover:border-opacity-20"
-              }
-            >
-              EUROPA
-            </a>
-            <a
-              onClick={() => changePlanet("Titan")}
-              className={
-                planet === "Titan"
-                  ? "cursor-pointer border-b-2 border-white pb-2"
-                  : "cursor-pointer border-b-2 pb-2 border-b-transparent hover:border-white hover:border-opacity-20"
-              }
-            >
-              TITAN
-            </a>
+            {destinations.map((destination) => (
+              <a
+                key={destination.name}
+                onClick={() => changePlanet(destination.name)}
+                className={
+                  planet === destination.name
+                    ? "destination-menu-active"
+                    : "destination-menu"
+                }
+              >
+                {destination.name}
+              </a>
+            ))}
           </div>
           <div>
-            <h1 className="text-[3.5rem] font-bellafair text-lightWhite uppercase md:text-[5rem] lg:text-[6.5rem]">
+            <h2 className="font-bellafair text-lightWhite uppercase">
               {planetInfo?.name}
-            </h1>
+            </h2>
             <p className="text-[0.9375rem] leading-[1.5625rem] md:text-[1rem] lg:text-[1.125rem] md:leading-[1.75rem] font-barlow text-lightPurple  lg:leading-[2rem] px-10 md:px-24 lg:px-0 lg:w-[30rem]">
               {planetInfo?.description}
             </p>
@@ -86,17 +59,17 @@ export const Destination = () => {
           <span className="w-10/12 md:w-9/12 lg:w-full  border-b border-[#383B4B]" />
           <div className="flex flex-col space-y-7 md:flex-row md:space-x-32 md:space-y-0">
             <div>
-              <h5 className="text-lightPurple font-barlow text-[1rem] tracking-[0.16875rem]">
+              <p className="text-lightPurple font-barlow text-[1rem] tracking-[0.16875rem]">
                 AVG. DISTANCE
-              </h5>
+              </p>
               <span className="text-lightWhite text-[1.75rem] tracking-[0.16875rem] font-bellafair uppercase ">
                 {planetInfo?.distance}
               </span>
             </div>
             <div>
-              <h5 className="text-lightPurple font-barlow text-[1rem] tracking-[0.16875rem]">
+              <p className="text-lightPurple font-barlow text-[1rem] tracking-[0.16875rem]">
                 EST. TRAVEL TIME
-              </h5>
+              </p>
               <span className="text-lightWhite text-[1.75rem] tracking-[0.16875rem] font-bellafair uppercase ">
                 {planetInfo?.travel}
               </span>

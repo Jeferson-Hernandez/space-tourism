@@ -1,24 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* 
+
 @layer base {
   h1 {
-    @apply text-[9.375rem]
+    @apply text-[5rem] md:text-[9.375rem]
   }
   h2 {
-    @apply text-[6.25rem]
+    @apply text-[3.5rem] md:text-[5rem] lg:text-[6.5rem]
   }
   h3 {
-    @apply text-[3.5rem]
+    @apply text-[1.5rem] md:text-[2.5rem] lg:text-[3.5rem]
   }
   h4 {
-    @apply text-[2rem]
+    @apply text-[1rem] md:text-[1.5rem] lg:text-[2rem]
   }
   h5 {
-    @apply text-[1.75rem]
+    @apply  text-[1rem] md:text-[1.25rem] lg:text-[1.75rem]
   }
-} */
+  h6 {
+    @apply text-[0.875rem] md:text-[1.5rem] lg:text-[2rem]
+  }
+}
+
+@layer components {
+  .technology-menu {
+    @apply cursor-pointer bg-transparent border text-white border-white border-opacity-20 font-bellafair rounded-full flex items-center justify-center w-[2.5rem] h-[2.5rem] md:w-[3.5rem] md:h-[3.5rem] lg:w-[5rem] lg:h-[5rem] hover:border-opacity-100 hover:bg-transparent
+  }
+  .technology-menu-active {
+    @apply cursor-pointer bg-transparent border text-black bg-white border-white border-opacity-20 font-bellafair rounded-full flex items-center justify-center w-[2.5rem] h-[2.5rem] md:w-[3.5rem] md:h-[3.5rem] lg:w-[5rem] lg:h-[5rem]
+  }
+
+  .crew-menu {
+    @apply cursor-pointer p-[0.35rem] bg-white opacity-25  rounded-full hover:opacity-50
+  }
+  .crew-menu-active {
+    @apply cursor-pointer p-[0.35rem] bg-white rounded-full
+  }
+
+  .destination-menu {
+    @apply cursor-pointer border-b-2 pb-2 border-b-transparent hover:border-white hover:border-opacity-20 uppercase
+  }
+  .destination-menu-active {
+    @apply cursor-pointer border-b-2 border-white pb-2 uppercase
+  }
+}
 
 @layer utilities {
   .nav-transparent {
