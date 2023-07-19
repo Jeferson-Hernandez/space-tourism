@@ -33,12 +33,6 @@ export default {
           "url('/src/assets/technology/background-technology-desktop.jpg')",
       },
       screens: {
-        // md: "375px",
-        // lg: "768px",
-        // xl: "1440px",
-        // md: "500px",
-        // lg: "900px",
-        // xl: "1750px",
         md: "768px",
         lg: "1440px",
         xl: "1750px",
