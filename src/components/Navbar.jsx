@@ -29,21 +29,21 @@ export const Navbar = () => {
     <div className="relative">
       <nav className="absolute overflow-x-hidden w-full flex flex-row justify-between items-center lg:mt-8">
         <div className="p-5 md:px-8 lg:px-14">
-          <img src="/assets/shared/logo.svg" alt="" />
+          <img src="/src/assets/shared/logo.svg" alt="" />
         </div>
         {toggleMenu ? (
           <div
             onClick={handleToggleMenu}
             className="p-5 cursor-pointer md:hidden z-40"
           >
-            <img src="/assets/shared/icon-close.svg" alt="" />
+            <img src="/src/assets/shared/icon-close.svg" alt="" />
           </div>
         ) : (
           <div
             onClick={handleToggleMenu}
             className="p-5 cursor-pointer md:hidden"
           >
-            <img src="/assets/shared/icon-hamburger.svg" alt="" />
+            <img src="/src/assets/shared/icon-hamburger.svg" alt="" />
           </div>
         )}
 
