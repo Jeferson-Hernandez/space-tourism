@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { NavItem } from "./NavItem";
 
+import logo from "../assets/shared/logo.svg";
+import closeIcon from "../assets/shared/icon-close.svg";
+import hamburgerIcon from "../assets/shared/icon-hamburger.svg";
+
 export const Navbar = () => {
   const getCurrentDimension = () => window.innerWidth;
 
@@ -29,21 +33,21 @@ export const Navbar = () => {
     <div className="relative">
       <nav className="absolute overflow-x-hidden w-full flex flex-row justify-between items-center lg:mt-8">
         <div className="p-5 md:px-8 lg:px-14">
-          <img src="/src/assets/shared/logo.svg" alt="" />
+          <img src={logo} alt="logo" />
         </div>
         {toggleMenu ? (
           <div
             onClick={handleToggleMenu}
             className="p-5 cursor-pointer md:hidden z-40"
           >
-            <img src="/src/assets/shared/icon-close.svg" alt="" />
+            <img src={closeIcon} alt="" />
           </div>
         ) : (
           <div
             onClick={handleToggleMenu}
             className="p-5 cursor-pointer md:hidden"
           >
-            <img src="/src/assets/shared/icon-hamburger.svg" alt="" />
+            <img src={hamburgerIcon} alt="" />
           </div>
         )}
 
